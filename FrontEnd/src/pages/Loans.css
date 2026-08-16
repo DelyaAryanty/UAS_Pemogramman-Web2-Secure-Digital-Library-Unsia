@@ -1,0 +1,122 @@
+.peminjaman-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.peminjaman-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.peminjaman-header h2 {
+  color: #574964;
+}
+
+.peminjaman-header button {
+  padding: 10px 16px;
+  background-color: #574964;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.peminjaman-header button:hover {
+  background-color: #9F8383;
+}
+
+.peminjaman-form {
+  background-color: #FFDAB3;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.peminjaman-form select,
+.peminjaman-form input {
+  padding: 10px;
+  border: 1px solid #9F8383;
+  border-radius: 4px;
+  color: #000;
+  flex: 1;
+  min-width: 160px;
+}
+
+.peminjaman-form button {
+  padding: 10px 20px;
+  background-color: #574964;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.peminjaman-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.peminjaman-table th {
+  background-color: #574964;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.peminjaman-table td {
+  padding: 12px;
+  border-bottom: 1px solid #C8AAAA;
+  color: #333;
+}
+
+.status-borrowed {
+  background-color: #FFDAB3;
+  color: #574964;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-returned {
+  background-color: #C8AAAA;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-return {
+  padding: 6px 12px;
+  background-color: #574964;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.error-message {
+  color: #dc2626;
+}
+
+.peminjaman-form select,
+.peminjaman-form input {
+  background-color: #ffffff;
+  color: #574964;
+}
+
+.peminjaman-form select option {
+  background-color: #ffffff;
+  color: #574964;
+}

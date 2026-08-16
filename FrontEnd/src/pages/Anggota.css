@@ -1,0 +1,218 @@
+.anggota-container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.anggota-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.anggota-header h2 {
+  margin: 0;
+  color: #574964;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.anggota-header button {
+  background-color: #574964;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.anggota-header button:hover {
+  background-color: #493c57;
+}
+
+.anggota-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 18px;
+  box-sizing: border-box;
+}
+
+.anggota-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 16px;
+  border: 1px solid #d8ced8;
+  border-radius: 8px;
+  background-color: #faf7f8;
+  color: #333;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.anggota-form input::placeholder {
+  color: #999;
+}
+
+.anggota-form input:focus {
+  border-color: #574964;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(87, 73, 100, 0.12);
+}
+
+.anggota-form button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #574964;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.anggota-form button:hover {
+  background-color: #493c57;
+}
+
+.anggota-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.anggota-table thead {
+  background-color: #574964;
+  color: white;
+}
+
+.anggota-table th {
+  padding: 18px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.anggota-table td {
+  padding: 16px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #eadfe3;
+}
+
+.anggota-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.anggota-table tbody tr:hover {
+  background-color: #fcf8fa;
+}
+
+.btn-edit,
+.btn-delete {
+  border: none;
+  border-radius: 7px;
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: 0.2s ease;
+}
+
+.btn-edit {
+  background-color: #ffd9b3;
+  color: #574964;
+}
+
+.btn-edit:hover {
+  background-color: #ffc994;
+}
+
+.btn-delete {
+  background-color: #c9aaaa;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #b99393;
+}
+
+.anggota-container > p {
+  text-align: center;
+  color: #574964;
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.error-message {
+  text-align: center;
+  color: #b44b4b !important;
+  font-size: 16px;
+  margin-top: 25px;
+}
+
+@media (max-width: 1000px) {
+  .anggota-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .anggota-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .anggota-container {
+    width: 94%;
+  }
+
+  .anggota-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .anggota-header h2 {
+    font-size: 28px;
+  }
+
+  .anggota-header button {
+    width: 100%;
+  }
+
+  .anggota-form {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .anggota-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.anggota-form input {
+  background-color: #ffffff;
+  color: #574964;
+  border: 1px solid #9F8383;
+}
+
+.anggota-form input::placeholder {
+  color: #777;
+}

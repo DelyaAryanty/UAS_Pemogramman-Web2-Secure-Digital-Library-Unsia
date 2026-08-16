@@ -1,0 +1,45 @@
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.dashboard-container h2 {
+  color: #574964;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.summary-card {
+  background-color: #FFDAB3;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(87, 73, 100, 0.15);
+}
+
+.card-label {
+  color: #574964;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.card-value {
+  color: #574964;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.chart-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(87, 73, 100, 0.15);
+}
