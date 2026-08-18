@@ -6,15 +6,13 @@ const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
-    // Validasi input
     if (!name || !email || !password) {
       return res.status(400).json({
         success: false,
         message: "Nama, email, dan password wajib diisi",
       });
     }
-
-    // Cek apakah email sudah terdaftar
+    
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
@@ -23,18 +21,15 @@ const register = async (req, res) => {
         message: "Email sudah terdaftar",
       });
     }
-
-    // Hash password
+  
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Buat user baru
     const user = await User.create({
       name,
       email,
       password: hashedPassword,
     });
 
-    // Jangan kirim password ke response
     res.status(201).json({
       success: true,
       message: "Registrasi berhasil",
@@ -59,8 +54,6 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-
-    // Validasi input
     if (!email || !password) {
       return res.status(400).json({
         success: false,
@@ -68,9 +61,7 @@ const login = async (req, res) => {
       });
     }
 
-    // Cari user berdasarkan email
     const user = await User.findOne({ email });
-
     if (!user) {
       return res.status(401).json({
         success: false,
@@ -78,9 +69,7 @@ const login = async (req, res) => {
       });
     }
 
-    // Bandingkan password dengan password yang sudah di-hash
     const isPasswordValid = await bcrypt.compare(password, user.password);
-
     if (!isPasswordValid) {
       return res.status(401).json({
         success: false,
@@ -99,7 +88,6 @@ const login = async (req, res) => {
         }
     );
 
-    // Login berhasil
     res.status(200).json({
         success: true,
         message: "Login berhasil",
